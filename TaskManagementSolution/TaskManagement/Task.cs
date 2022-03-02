@@ -24,8 +24,12 @@ namespace TaskManagement
             this.endDate = endDate;
 
         }
+        public Task()
+        {
 
+        }
 
+       
 
     }
 }

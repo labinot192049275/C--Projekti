@@ -15,7 +15,7 @@ namespace TaskManagement
 
         public  List<Task> tasqet { get; set; }
 
-
+       
         public Projekti()
         {
 

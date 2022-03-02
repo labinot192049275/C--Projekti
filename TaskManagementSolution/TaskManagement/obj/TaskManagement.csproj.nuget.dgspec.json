@@ -1,32 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
         "projectName": "TaskManagement",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Projekti\\TaskManagementSolution\\TaskManagement\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,8 +41,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -49,6 +53,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
