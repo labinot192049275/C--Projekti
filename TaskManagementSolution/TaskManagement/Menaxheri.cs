@@ -10,7 +10,10 @@ namespace TaskManagement
     {
 
         public List<Lideri> lideret { get; set; }
+       
+        List<Goal> qellimet=new List<Goal>();   
 
+        
         public Menaxheri(int id, string emri, string mbiemri, string email): base(id, emri, mbiemri, email) { 
         
 
@@ -52,5 +55,49 @@ namespace TaskManagement
             }
             Console.WriteLine("Tasku me prioritet me te larte eshte " + taskuMePrioritetMeTeLarte.pershkrimi);
         }
+
+
+        public void shtoQellimet(Goal g)
+        {
+
+            if (qellimet.Contains(g))
+            {
+                Console.WriteLine("Egziston qellimi ---> "+g.ToString());
+
+            }
+
+            else if (g==null)
+            {
+
+                Console.WriteLine("Vlerat null nuk lejohen");
+
+            }
+
+            else
+            {
+
+                qellimet.Add(g);    
+            }
+
+        }
+
+        public void shtypQellimet()
+        {
+
+
+            foreach (var item in qellimet)
+            {
+
+                Console.WriteLine(item);
+
+            }
+
+
+        }
+
+
+
+
+
     }
 }
