@@ -10,6 +10,29 @@ namespace TaskManagement
     {
         public Menaxheri menaxheri { get; set; }
         public List<Punetori> punetoret { get; set; }
+        public List<Task> tasqet { get; set; }
+
+        public void ShtoTask(Task tasku)
+        {
+            if (tasku != null && !tasqet.Contains(tasku))
+            {
+                tasqet.Add(tasku);
+            }
+        }
+
+        public void RemoveTask(Task tasku)
+        {
+            if (tasqet.Contains(tasku))
+            {
+                tasqet.Remove(tasku);
+            }
+        }
+
+        public override string pozita()
+        {
+
+            return "Lider";
+        }
 
         public Lideri(int id, string emri, string mbiemri, string email,Menaxheri m) : base(id, emri, mbiemri, email)
         {
@@ -19,11 +42,6 @@ namespace TaskManagement
 
         }
 
-        public override string pozita()
-        {
-
-            return "Lider";
-        }
-
+       
     }
 }

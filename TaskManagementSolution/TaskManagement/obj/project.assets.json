@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\projekti\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
       "projectName": "TaskManagement",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\projekti\\C--Projekti\\TaskManagementSolution\\TaskManagement\\TaskManagement.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\task\\C--Projekti\\TaskManagementSolution\\TaskManagement\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\projekti\\C--Projekti\\TaskManagementSolution\\TaskManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

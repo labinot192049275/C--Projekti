@@ -8,24 +8,14 @@ namespace TaskManagement
 {
     public class Menaxheri : Personi
     {
-
+        public List<Task> TasqetSortuara = new List<Task>();
         public List<Lideri> lideret { get; set; }
        
-        List<Goal> qellimet=new List<Goal>();   
-
-        
-        public Menaxheri(int id, string emri, string mbiemri, string email): base(id, emri, mbiemri, email) { 
-        
-
-
-
-        }
+        List<Goal> qellimet=new List<Goal>();       
 
         public override string pozita()
         {
-
-
-            return "Menazher";
+            return "Menaxher";
         }
 
         public void CaktoPrioritetin(List<Task> tasqet)
@@ -36,7 +26,6 @@ namespace TaskManagement
 
             foreach (var task in tasqet)
             {
-                
                 if (firsttime)
                 {
                     taskuMePrioritetMeTeLarte = task;
@@ -44,18 +33,28 @@ namespace TaskManagement
                     firsttime = false;
                 }
                 TimeSpan t1 = task.endDate - task.startDate;
-                if (time > task.endDate - task.startDate)
+                if (time > t1)
                 {
                     time = task.endDate - task.startDate;
-                    //task = tasku;
                     taskuMePrioritetMeTeLarte = task;
                 }
-
-
             }
-            Console.WriteLine("Tasku me prioritet me te larte eshte " + taskuMePrioritetMeTeLarte.pershkrimi);
-        }
+            TasqetSortuara.Add(taskuMePrioritetMeTeLarte);
+            tasqet.Remove(taskuMePrioritetMeTeLarte);
 
+            while (tasqet.Count != 0)
+            {
+                CaktoPrioritetin(tasqet);
+            }
+        }
+        public void PrintoTasqetSortuara()
+        {
+            Console.WriteLine("Tasqet e renditura sipas prioritetit qe duhet te kryhen : ");
+            for (int i = 0; i < TasqetSortuara.Count; i++)
+            {
+                Console.WriteLine($"{i + 1} --> {TasqetSortuara[i]}");
+            }
+        }   
 
         public void shtoQellimet(Goal g)
         {
@@ -63,19 +62,15 @@ namespace TaskManagement
             if (qellimet.Contains(g))
             {
                 Console.WriteLine("Egziston qellimi ---> "+g.ToString());
-
             }
 
             else if (g==null)
             {
-
                 Console.WriteLine("Vlerat null nuk lejohen");
-
             }
 
             else
             {
-
                 qellimet.Add(g);    
             }
 
@@ -83,21 +78,14 @@ namespace TaskManagement
 
         public void shtypQellimet()
         {
-
-
             foreach (var item in qellimet)
             {
-
                 Console.WriteLine(item);
-
             }
-
+        }
+        public Menaxheri(int id, string emri, string mbiemri, string email) : base(id, emri, mbiemri, email)
+        {
 
         }
-
-
-
-
-
     }
 }
