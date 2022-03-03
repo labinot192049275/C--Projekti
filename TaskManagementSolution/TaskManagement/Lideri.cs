@@ -30,16 +30,12 @@ namespace TaskManagement
 
         public override string pozita()
         {
-
             return "Lider";
         }
 
-        public Lideri(int id, string emri, string mbiemri, string email,Menaxheri m) : base(id, emri, mbiemri, email)
+        public Lideri(int id, string emri, string mbiemri) : base(id, emri, mbiemri)
         {
-
-            this.menaxheri = m; 
-
-
+         
         }
 
        

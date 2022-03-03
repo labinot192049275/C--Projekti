@@ -83,7 +83,7 @@ namespace TaskManagement
                 Console.WriteLine(item);
             }
         }
-        public Menaxheri(int id, string emri, string mbiemri, string email) : base(id, emri, mbiemri, email)
+        public Menaxheri(int id, string emri, string mbiemri) : base(id, emri, mbiemri)
         {
 
         }

@@ -11,7 +11,7 @@ namespace TaskManagement
 
         public Lideri lideri { get; set; }
 
-        public Punetori(int id, string emri, string mbiemri, string email,Lideri l) : base(id, emri, mbiemri, email)
+        public Punetori(int id, string emri, string mbiemri,Lideri l) : base(id, emri, mbiemri)
         {
 
             this.lideri = l;

@@ -14,14 +14,11 @@ namespace TaskManagement
         public string mbiemri { get; set; }
         public string email { get; set; }
 
-        public Personi(int id,string emri,string mbiemri,string email) { 
-        
+        public Personi(int id,string emri,string mbiemri) 
+        { 
             this.ID = id;   
             this.emri = emri;
-            this.mbiemri = mbiemri; 
-            this.email = email;
-            
-
+            this.mbiemri = mbiemri;           
         }
         public abstract string pozita();
 
