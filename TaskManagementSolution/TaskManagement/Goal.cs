@@ -15,6 +15,13 @@ namespace TaskManagement
 
         public Goal(int id, string emri,string pershkrimi)
         {
+
+            if (id<0 || emri.Trim().Equals("") || emri==null || pershkrimi.Trim().Equals("") || pershkrimi == null)
+            {
+                throw new KompaniaException("Te dhenat e goals nuk u plotesuan mire !");
+
+            }
+
             this.id = id;  
             this.emri = emri;
             this.pershkrimi = pershkrimi;   

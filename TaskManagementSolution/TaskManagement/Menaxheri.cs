@@ -11,8 +11,17 @@ namespace TaskManagement
         public List<Task> TasqetSortuara = new List<Task>();
         public List<Lideri> lideret { get; set; }
        
-        List<Goal> qellimet=new List<Goal>();       
+        List<Goal> qellimet=new List<Goal>();
 
+        public Menaxheri(int id, string emri, string mbiemri) : base(id, emri, mbiemri)
+        {
+
+
+
+
+
+
+        }
         public override string pozita()
         {
             return "Menaxher";
@@ -45,9 +54,6 @@ namespace TaskManagement
                 Console.WriteLine(item);
             }
         }
-        public Menaxheri(int id, string emri, string mbiemri) : base(id, emri, mbiemri)
-        {
-
-        }
+       
     }
 }

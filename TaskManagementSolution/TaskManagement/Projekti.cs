@@ -12,16 +12,26 @@ namespace TaskManagement
         public string name { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        //public  List<Task> tasqet { get; set; }
         public Lideri Lideri { get; set; }
+
+        
+        
 
         public Projekti(int id,string name,DateTime startDate,DateTime endDate,Lideri lideri)
         {
+
+            if (id<0 || name.Trim().Equals("") || name==null || startDate==null || endDate ==null || lideri==null )
+            {
+
+                throw new KompaniaException("Te dhenat e Projektit nuk jane te sakta! ");
+
+            }
+          
+
             this.id = id;
             this.name = name;
             this.startDate = startDate;
             this.endDate = endDate;
-            //this.tasqet = tasqet;
             this.Lideri = lideri;
         }
 

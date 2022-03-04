@@ -14,9 +14,12 @@ namespace TaskManagement
         public Punetori(int id, string emri, string mbiemri,Lideri l) : base(id, emri, mbiemri)
         {
 
+            if (l==null)
+            {
+                throw new KompaniaException("Lideri nuk mund te jete null !");
+
+            }
             this.lideri = l;
-
-
         }
 
         public override string pozita()
