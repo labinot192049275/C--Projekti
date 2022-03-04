@@ -106,7 +106,8 @@ namespace TaskManagement
 
         public void OpsionetPerMenaxherin()
         {
-            Console.WriteLine("\n1 --> Shto projekt\n2 --> Fshij projekt\n3 --> Shiko te gjitha projektet\n4 --> Perfundo");
+            string opsionet="\n1 --> Shto projekt\n2 --> Fshij projekt\n3 --> Shiko te gjitha projektet\n4 --> Perfundo";
+            Console.WriteLine(opsionet);
             int komanda = int.Parse(Console.ReadLine());
 
             if (komanda == 1)
@@ -119,11 +120,13 @@ namespace TaskManagement
                     ShtoProjekt();
                     nrProjekteve--;
                 }
-                Kyqu();
+                Console.WriteLine($"{opsionet}");
+                komanda = int.Parse(Console.ReadLine());
             }
             if (komanda == 2)
             {
-                Console.Write("\nSheno emrin e projektit qe doni te fshini:  ");
+                string fshijProjekt="\nSheno emrin e projektit qe doni te fshini:  ";
+                Console.WriteLine(fshijProjekt);
                 string emriProjektitPerFshirje = Console.ReadLine();
 
                 foreach (var projekt in projektet)
@@ -132,18 +135,23 @@ namespace TaskManagement
                     {
                         projektet.Remove(projekt);
                         Console.WriteLine($"Projekti {projekt.name} u fshi me sukses! ");
+                        break;
                     }
                 }
-                Kyqu();
+                Console.WriteLine($"{opsionet}");
+                komanda = int.Parse(Console.ReadLine());
+
             }
             if (komanda == 3)
             {
-                Console.WriteLine("\nTe gjitha projektet: ");
+                string shfaq="\nTe gjitha projektet: ";
+                Console.WriteLine(shfaq);
                 foreach (var projekt in projektet)
                 {
                     Console.WriteLine($"{projekt}");
                 }
-                Kyqu();
+                Console.WriteLine(opsionet);
+                komanda=int.Parse(Console.ReadLine());
             }
             if (komanda == 4)
             {

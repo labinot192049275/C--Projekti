@@ -16,8 +16,8 @@ namespace TaskManagement
             //Task tasku1 = new Task(1, "tasku1", DateTime.ParseExact("01-02-2021", "dd-MM-yyyy", null), DateTime.ParseExact("01-03-2021", "dd-MM-yyyy", null));
             //Task tasku2 = new Task(2, "tasku2", DateTime.ParseExact("01-02-2022", "dd-MM-yyyy", null), DateTime.ParseExact("01-06-2022", "dd-MM-yyyy", null));
             //Task tasku3 = new Task(3, "tasku3", DateTime.ParseExact("01-02-2022", "dd-MM-yyyy", null), DateTime.ParseExact("01-05-2022", "dd-MM-yyyy", null));
-           
-            
+
+
             //Menaxheri m1 = new Menaxheri(2, "filan", "fisteku");
 
             //List<Task> tasqet = new List<Task>();
@@ -42,8 +42,11 @@ namespace TaskManagement
             //Console.WriteLine("Qellimet  print ----> ");
 
             //m1.shtypQellimet();
+            
+            Console.ForegroundColor = ConsoleColor.Red;
 
-
+            Console.WriteLine("Miresevini\nRegjistro kompanine!"); 
+            
             
             Kompania k=new Kompania();
             k.RegjistroKompanine();
