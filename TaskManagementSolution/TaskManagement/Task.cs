@@ -12,50 +12,24 @@ namespace TaskManagement
         public  string pershkrimi{ get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        
-        private bool statusi = false;
-        public bool Statusi 
-        { 
-            get { return statusi;  }
-            set { statusi = value; } 
-        }
+        public Punetori punetori { get; set; }
+        public string bug { get; set; } = "nuk ka bug";
 
-        public Task(int id,string pershkrimi,DateTime startDate,DateTime endDate)
+
+        public Task(int id,string pershkrimi,DateTime startDate,DateTime endDate,Punetori p)
         {
 
             this.taskID = id; 
             this.pershkrimi = pershkrimi; 
             this.startDate = startDate;
             this.endDate = endDate;
-        }
-
-        public bool Equals(Task tasku)
-        {
-            if (tasku is Task)
-            {
-                Task task = (Task)tasku;
-                return task.pershkrimi == this.pershkrimi;
-            }
-            return false;
+            this.punetori = p;
         }
 
         public override string ToString()
         {
-            string statusiTaskut = "";
-            if (statusi == false)
-            {
-                return statusiTaskut = "i pa perfunduar";
-            }
-            else if (statusi == true)
-            {
-                return statusiTaskut="i perfunduar";
-            }
-
-            return $"Tasku {taskID} -> {pershkrimi} eshte {statusiTaskut}";
+            return $"Tasku {taskID} -> {pershkrimi} kohezgjatja {startDate} - {endDate}, {bug}";
         }
-        public Task()
-        {
-
-        }
+      
     }
 }

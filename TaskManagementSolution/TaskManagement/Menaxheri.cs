@@ -16,45 +16,7 @@ namespace TaskManagement
         public override string pozita()
         {
             return "Menaxher";
-        }
-
-        public void CaktoPrioritetin(List<Task> tasqet)
-        {
-            Task taskuMePrioritetMeTeLarte = null;
-            TimeSpan time = TimeSpan.Zero;
-            bool firsttime = true;
-
-            foreach (var task in tasqet)
-            {
-                if (firsttime)
-                {
-                    taskuMePrioritetMeTeLarte = task;
-                    time = task.endDate - task.startDate;
-                    firsttime = false;
-                }
-                TimeSpan t1 = task.endDate - task.startDate;
-                if (time > t1)
-                {
-                    time = task.endDate - task.startDate;
-                    taskuMePrioritetMeTeLarte = task;
-                }
-            }
-            TasqetSortuara.Add(taskuMePrioritetMeTeLarte);
-            tasqet.Remove(taskuMePrioritetMeTeLarte);
-
-            while (tasqet.Count != 0)
-            {
-                CaktoPrioritetin(tasqet);
-            }
-        }
-        public void PrintoTasqetSortuara()
-        {
-            Console.WriteLine("Tasqet e renditura sipas prioritetit qe duhet te kryhen : ");
-            for (int i = 0; i < TasqetSortuara.Count; i++)
-            {
-                Console.WriteLine($"{i + 1} --> {TasqetSortuara[i]}");
-            }
-        }   
+        }       
 
         public void shtoQellimet(Goal g)
         {
